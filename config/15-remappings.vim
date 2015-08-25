@@ -22,7 +22,3 @@ inoremap jk <esc>
 
 " Save session
 nnoremap <leader>S :mksession!<CR>
-
-" move among buffers with CTRL
-map <C-K> :bnext<CR>
-map <C-J> :bprev<CR>

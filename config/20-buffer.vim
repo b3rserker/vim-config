@@ -25,9 +25,9 @@ set hidden
 "nnoremap <Leader>í :9b<CR>
 "nnoremap <Leader>é :10b<CR>
 
-" It's useful to show the buffer number in the status line.
-"set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-
 " Quick buffer switching
 " map <leader>b :ls<CR>:b
 
+" move among buffers with CTRL
+map <C-L> :bnext<CR>
+map <C-H> :bprev<CR>

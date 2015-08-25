@@ -6,6 +6,7 @@ syntax on
 colorscheme default
 
 " Global configuration
+set encoding=utf-8
 set number
 set tabstop=4
 set softtabstop=4

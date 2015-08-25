@@ -12,3 +12,9 @@ let g:netrw_chgwin=1
 " remap control-enter to open files in new tab
 nmap <silent> <C-CR> t :rightbelow 50vs<CR>:e .<CR>:wincmd h<CR>
 " the same remap as above - may be necessary in some distros
+
+let g:netrw_liststyle=0         " thin (change to 3 for tree)
+let g:netrw_banner=0            " no banner
+let g:netrw_altv=1              " open files on right
+let g:netrw_preview=1           " open previews vertically
+
