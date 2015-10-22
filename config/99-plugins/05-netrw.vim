@@ -1,5 +1,5 @@
 "Enable mouse usage. makes it easier to browse multiple tabs
-set mouse=a
+set mouse=n
 " hide netrw top message
 let g:netrw_banner=0
 " tree listing by default

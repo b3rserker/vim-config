@@ -1,5 +1,5 @@
 set autochdir
-set tags=./tags;
+set tags=./tags,~/.rvm/tags;
 
 " fix meta-keys which generate <Esc>a .. <Esc>z
 "let c='a'
@@ -31,3 +31,15 @@ function! SourceMyScripts()
 endfunction
 
 call SourceMyScripts()
+set mouse=
+
+" load the types.vim highlighting file, if it exists
+autocmd BufRead,BufNewFile *.[ch] let fname = expand('<afile>:p:h') . '/types.vim'
+autocmd BufRead,BufNewFile *.[ch] if filereadable(fname)
+autocmd BufRead,BufNewFile *.[ch]   exe 'so ' . fname
+autocmd BufRead,BufNewFile *.[ch] endif
+
+:noremap <C-J>  :sp tags<CR>:%s/^\([^     :]*:\)\=\([^    ]*\).*/syntax keyword Tag \2/<CR>:wq! tags.vim<CR>/^<CR><F12>
+:noremap <C-K>  :so tags.vim<CR>
+
+let g:viewdoc_open="rightbelow 100vs"
