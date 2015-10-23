@@ -25,3 +25,6 @@
 [submodule "bundle/vim-togglecursor"]
 	path = bundle/vim-togglecursor
 	url = https://github.com/jszakmeister/vim-togglecursor.git
+[submodule "bundle/vim-pathogen"]
+	path = bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
