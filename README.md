@@ -1,10 +1,16 @@
 # vim-config
-My current vim IDE(!) config, very experimental, very messy so far - but I am working on it
+My attempt to build vim IDE(!), very experimental, very messy so far - but I am working on it!
 
 # Installation
 cd ~
+
 git clone https://github.com/b3rserker/vim-config.git .vim
+
 ln -s .vim/vimrc .vimrc
+
+git submodule init
+
+git submodule update
 
 # Changes
 - ruby support still not complete
