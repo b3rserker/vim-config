@@ -12,7 +12,7 @@ set laststatus=2
 "" EasyMotion prereqs (1)
 map <Esc>[@ <S-Space>
 " My <SpaceBar> hack
-autocmd BufReadPost * unmap! <Space>
+"autocmd BufReadPost * unmap! <Space>
 "au BufWinEnter * silent unmap! <Space>
 
 ""Easymotion (2)
@@ -72,10 +72,11 @@ let g:gitgutter_map_keys = 0
 map hn <Plug>GitGutterNextHunk
 map hp <Plug>GitGutterPrevHunk
 " Refresh immidiately, need because it is refreshed on CursorHold for updatetime secs
-set updatetime=1000
+" set updatetime=1000 " adjusted in common.vim because it affects everything!!!
 let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
 let g:gitgutter_sign_column_always = 1
 let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 1
 let g:gitgutter_escape_grep = 1
+

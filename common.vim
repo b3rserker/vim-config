@@ -1,14 +1,6 @@
 " Make sure we are on same tune first
 set shell=/bin/bash
 
-" This is pathogen fix to be co-loaded properly with
-" some plugins (this order of commands is mandatory!)
-filetype off
-set nocompatible
-execute pathogen#infect()
-syntax on
-filetype on
-
 " Mapleader
 "let mapleader="<\Space>"
 let mapleader=","
@@ -94,22 +86,22 @@ nnoremap <C-k> :bnext<CR>
 nnoremap <C-j> :bprevious<CR>
 
 " Make sure we are wrapping when diffing - otherwise totally annoying
-autocmd VimEnter * if &diff | execute 'windo set wrap' | endif
+"autocmd VimEnter * if &diff | execute 'windo set wrap' | endif
 
 " Cursor line addition
-augroup CursorLine
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  au WinLeave * setlocal nocursorline
-augroup END
+"augroup CursorLine
+"  au!
+"  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+"  au WinLeave * setlocal nocursorline
+"augroup END
 
 " Quickly open/reload vim
 nnoremap <leader>r :source $MYVIMRC<CR>
 " On save too
-augroup reload_vimrc " {
-    autocmd!
-    autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END " }
+"augroup reload_vimrc " {
+"    autocmd!
+"    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+"augroup END " }
 
 " Get rid of the stupid and retarded vim ESC BULLSHIT!!!
 " USE CTRL+C or jk in insert mode!!!
