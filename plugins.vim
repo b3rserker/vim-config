@@ -1,5 +1,5 @@
 " Yaml faster sytax
-au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
+" au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
 
 "" AirLine
 " Just show the filename (no path) in the tab

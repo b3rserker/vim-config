@@ -1,6 +1,9 @@
 " Make sure we are on same tune first
 set shell=/bin/bash
 
+" Freakin important - THIS SOLVE PROBLEMS WITH LONG LINE SYNTAX HGLTING!
+set regexpengine=1
+
 " This is pathogen fix to be co-loaded properly with
 " some plugins (this order of commands is mandatory!)
 filetype off
@@ -52,7 +55,7 @@ set wrap
 set t_Co=256
 set hls! "no search history memorized
 set undolevels=0
-"set ttyfast       " u got a fast terminal
+set ttyfast       " u got a fast terminal
 "set ttyscroll=3
 "set lazyredraw     " to avoid scrolling problems
 set nobackup       " no backup files
