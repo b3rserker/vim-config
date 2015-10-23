@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 set autochdir
 set tags=./tags,~/.rvm/tags;
 
@@ -16,14 +17,10 @@ set tags=./tags,~/.rvm/tags;
 "endfor
 
 " Include proper structure of config files
+=======
+>>>>>>> Stashed changes
 function! SourceMyScripts()
-  let file_list = split(globpath("~/.vim/config", "*.vim"), '\n')
-
-  for file in file_list
-    execute( 'source '.file )
-  endfor
-
-  let file_list = split(globpath("~/.vim/config/99-plugins", "*.vim"), '\n')
+  let file_list = split(globpath("~/.vim/", "*.vim"), '\n')
 
   for file in file_list
     execute( 'source '.file )
@@ -31,6 +28,7 @@ function! SourceMyScripts()
 endfunction
 
 call SourceMyScripts()
+<<<<<<< Updated upstream
 set mouse=
 
 " load the types.vim highlighting file, if it exists
@@ -43,3 +41,6 @@ autocmd BufRead,BufNewFile *.[ch] endif
 :noremap <C-K>  :so tags.vim<CR>
 
 let g:viewdoc_open="rightbelow 100vs"
+=======
+
+>>>>>>> Stashed changes
