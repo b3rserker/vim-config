@@ -1,3 +1,6 @@
+" Yaml faster sytax
+au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
+
 "" AirLine
 " Just show the filename (no path) in the tab
 let g:airline#extensions#tabline#fnamemod = ':t'

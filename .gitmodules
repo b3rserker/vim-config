@@ -31,3 +31,6 @@
 [submodule "bundle/vim-visual-star-search"]
 	path = bundle/vim-visual-star-search
 	url = https://github.com/nelstrom/vim-visual-star-search.git
+[submodule "bundle/vim-yaml"]
+	path = disabled/vim-yaml
+	url = https://github.com/stephpy/vim-yaml.git

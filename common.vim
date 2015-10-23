@@ -4,23 +4,25 @@ set shell=/bin/bash
 " This is pathogen fix to be co-loaded properly with
 " some plugins (this order of commands is mandatory!)
 filetype off
+syntax off
 set nocompatible
 execute pathogen#infect()
 syntax on
 filetype on
 " Enable filetype plugins 
 filetype plugin on
+autocmd FileType yaml let b:did_indent = 1
 
 " Mapleader
 "let mapleader="<\Space>"
 let mapleader=","
 
 " Common configuration
-filetype plugin indent on " activates filetype detection
+"filetype plugin indent on " activates filetype detection
 colorscheme delek
 
 " Gitgutter requirement - refresh intervall of diffing takes this
-set updatetime=1000     " Refresh immidiately, need because it is refreshed on CursorHold for updatetime secs
+set updatetime=4000     " Refresh immidiately, need because it is refreshed on CursorHold for updatetime secs
 
 set mouse=
 set encoding=utf-8
@@ -49,10 +51,10 @@ set ruler
 set wrap
 set t_Co=256
 set hls! "no search history memorized
-"set undolevels=1000
+set undolevels=0
 "set ttyfast       " u got a fast terminal
 "set ttyscroll=3
-set lazyredraw     " to avoid scrolling problems
+"set lazyredraw     " to avoid scrolling problems
 set nobackup       " no backup files
 set nowritebackup  " only in case you don't want a backup file while editing
 set noswapfile     " no swap files
