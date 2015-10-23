@@ -1,6 +1,16 @@
 " Make sure we are on same tune first
 set shell=/bin/bash
 
+" This is pathogen fix to be co-loaded properly with
+" some plugins (this order of commands is mandatory!)
+filetype off
+set nocompatible
+execute pathogen#infect()
+syntax on
+filetype on
+" Enable filetype plugins 
+filetype plugin on
+
 " Mapleader
 "let mapleader="<\Space>"
 let mapleader=","
