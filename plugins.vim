@@ -83,3 +83,15 @@ let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 1
 let g:gitgutter_escape_grep = 1
 
+"Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_enable_signs = 1
+let g:syntastic_loc_list_height = 10
+set sessionoptions-=blank "This will prevent |:mksession| from saving |syntastic-error-window| as empty quickfix windows.
+"let g:syntastic_ruby_mri_args = "--my --args --here"

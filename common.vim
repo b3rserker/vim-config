@@ -54,7 +54,7 @@ set ruler
 set wrap
 set t_Co=256
 set hls! "no search history memorized
-set undolevels=0
+set undolevels=100
 set ttyfast       " u got a fast terminal
 "set ttyscroll=3
 "set lazyredraw     " to avoid scrolling problems

@@ -34,3 +34,6 @@
 [submodule "bundle/vim-yaml"]
 	path = disabled/vim-yaml
 	url = https://github.com/stephpy/vim-yaml.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
