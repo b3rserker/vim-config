@@ -6,6 +6,8 @@
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:Powerline_symbols = 'fancy'
 
 "" Vim-ansible-yaml
 " Ansible doesn't work better that vim's yaml, even more doesn't do auto-ident with gg=G combo
