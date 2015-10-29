@@ -40,3 +40,6 @@
 [submodule "bundle/vim-maximizer"]
 	path = bundle/vim-maximizer
 	url = https://github.com/vim-scripts/vim-maximizer.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git

@@ -56,18 +56,18 @@ let g:BufstopSplit="topleft"
 let g:BufstopSorting="none"
 
 " Taglist
-nnoremap <silent> <C-g> :TlistToggle<CR>
-let g:Tlist_Auto_Highlight_Tag=1
-let g:Tlist_GainFocus_On_ToggleOpen=1
-let g:Tlist_WinWidth=40
-let g:Tlist_Exit_OnlyWindow=1
-let g:Tlist_Close_On_Select=1
-let g:Tlist_Brief_Help = 1
-let g:Tlist_Show_One_File = 1
-let g:Tlist_Highlight_Tag_On_BufEnter = 1
-let g:Tlist_Display_Tag_Scope = 1
-let Tlist_Close_On_Select = 1
-let Tlist_Auto_Update = 1
+"nnoremap <silent> <C-g> :TlistToggle<CR>
+"let g:Tlist_Auto_Highlight_Tag=1
+"let g:Tlist_GainFocus_On_ToggleOpen=1
+"let g:Tlist_WinWidth=40
+"let g:Tlist_Exit_OnlyWindow=1
+"let g:Tlist_Close_On_Select=1
+"let g:Tlist_Brief_Help = 1
+"let g:Tlist_Show_One_File = 1
+"let g:Tlist_Highlight_Tag_On_BufEnter = 1
+"let g:Tlist_Display_Tag_Scope = 1
+"let Tlist_Close_On_Select = 1
+"let Tlist_Auto_Update = 1
 
 " Vim maximizer
 map <C-w><Bar> :MaximizerToggle<CR>
@@ -97,3 +97,21 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_loc_list_height = 10
 set sessionoptions-=blank "This will prevent |:mksession| from saving |syntastic-error-window| as empty quickfix windows.
 "let g:syntastic_ruby_mri_args = "--my --args --here"
+
+" Tagbar
+nmap <C-r> :TagbarToggle<CR>
+"let g:tagbar_map_togglefold = "<space>"
+let g:tagbar_map_showproto = "<right>"
+let g:tagbar_autoclose = 0
+let g:tagbar_autofocus = 1
+let g:tagbar_left=1
+let g:tagbar_width = 60
+let g:tagbar_sort = 0
+let g:tagbar_compact = 1 "omit the short help at the top
+let g:tagbar_indent = 1
+let g:tagbar_show_visibility = 1
+let g:tagbar_show_linenumbers = 0
+let g:tagbar_hide_nonpublic = 0
+let g:tagbar_foldlevel = 2
+let g:tagbar_autoshowtag = 1
+let g:tagbar_previewwin_pos = "aboveleft"
