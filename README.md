@@ -2,6 +2,9 @@
 My attempt to build vim IDE(!), very experimental, very messy so far - but I am working on it!
 
 # Installation
+
+Install https://github.com/powerline/fonts first.
+
 cd ~
 
 git clone https://github.com/b3rserker/vim-config.git .vim
