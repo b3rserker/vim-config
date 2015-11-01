@@ -125,5 +125,8 @@ map <C-c> <Esc>
 " Clear jumplist hack!!! BIND THIS!!! TODO!!
 ":let i = 0 | while i < 100 | mark ' | let i = i + 1 | endwhile
 
-" Override colors
-highlight VertSplit cterm=NONE ctermfg=NONE ctermbg=Blue
+"augroup syntastic
+"    autocmd CursorHold * nested update
+"augroup END
+"set updatetime=200
+

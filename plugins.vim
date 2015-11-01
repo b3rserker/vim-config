@@ -5,9 +5,8 @@
 " Just show the filename (no path) in the tab
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
-set laststatus=2
+set laststatus=2 " always show airline!
 let g:airline_powerline_fonts = 1
-let g:Powerline_symbols = 'fancy'
 
 "" Vim-ansible-yaml
 " Ansible doesn't work better that vim's yaml, even more doesn't do auto-ident with gg=G combo
@@ -115,3 +114,35 @@ let g:tagbar_hide_nonpublic = 0
 let g:tagbar_foldlevel = 2
 let g:tagbar_autoshowtag = 1
 let g:tagbar_previewwin_pos = "aboveleft"
+
+" NerdCommenter
+" left default
+
+" NerdTree
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrows = 1
+"let g:NERDTreeDirArrowExpandable = '▸'
+"let g:NERDTreeDirArrowCollapsible = '▾'
+
+" Open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" NerdTree-git
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
+
+" Redraw airline after sourcing! Or there will be blue empty bar instead!
+AirlineRefresh
