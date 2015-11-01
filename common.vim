@@ -40,7 +40,9 @@ set showmatch
 set ignorecase          " ignore case when searching
 set smartcase           " ignore case if search pattern is all lowercase, case-sensitive otherwise
 set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+"set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set listchars=tab:▸\ ,eol:\|
+set listchars+=trail:·
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 set foldenable          " enable folding
@@ -130,3 +132,8 @@ map <C-c> <Esc>
 "augroup END
 "set updatetime=200
 
+" Get rid of vim's begin/end nonsense mappings
+nnoremap + 0
+nnoremap é $
+noremap <C-A> <Home>
+noremap <C-E> <End>

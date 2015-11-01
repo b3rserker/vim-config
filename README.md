@@ -15,6 +15,12 @@ git submodule init
 
 git submodule update
 
-# Changes
-- ruby support still not complete
-- so far adjusting for python only
+# Info
+- so far adjusted for python only (very basic use-case first)
+- some CZ keyboard adjustments there
+
+# Todo
+- REAL ruby support still non-existing (this will be hard - ctags unusable & plugins modification must be made :/)
+- clipboard without "+clipboard" support will be painful work for weeks (recompilation will be only last solution)
+- also integration with tmux (byobu) non-existing (paste?, bash?)
+- autocompletion in vim is far from usable - must be replaced with "sane" plugin
