@@ -145,4 +145,4 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 " Redraw airline after sourcing! Or there will be blue empty bar instead!
-AirlineRefresh
+silent! AirlineRefresh
