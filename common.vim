@@ -22,7 +22,7 @@ let mapleader=","
 
 " Common configuration
 "filetype plugin indent on " activates filetype detection
-colorscheme delek
+colorscheme default
 
 " Gitgutter requirement - refresh intervall of diffing takes this
 set updatetime=4000     " Refresh immidiately, need because it is refreshed on CursorHold for updatetime secs
@@ -137,3 +137,19 @@ nnoremap + 0
 nnoremap é $
 noremap <C-A> <Home>
 noremap <C-E> <End>
+
+
+" Add two-column feature for reading python or text (http://vim.wikia.com/wiki/View_text_file_in_two_columns)
+noremap <silent> <Leader>vs :<C-u>let @z=&so<CR>:set so=0 noscb<CR>:bo vs<CR>Ljzt:setl scb<CR><C-w>p:setl scb<CR>:let &so=@z<CR>
+noremap <silent> <Leader>ac :exe AddColumn()<CR>
+function! AddColumn()
+  exe "norm \<C-u>"
+  let @z=&so
+  set noscb so=0
+  bo vs
+  exe "norm \<PageDown>"
+  setl scrollbind
+  wincmd p
+  setl scrollbind
+  let &so=@z
+endfunction
