@@ -125,10 +125,16 @@ let g:NERDTreeDirArrows = 1
 "let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeQuitOnOpen=0
 let g:NERDTreeWinSize=50
+set autochdir
+
+" Make ctrl-p work with nerdtree
+let NERDTreeChDirMode=2
+let g:ctrlp_working_path_mode = 'c'
 
 " Open a NERDTree automatically when vim starts up if no files were specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" This fights with auto-reopening of previous vim-session plugin session
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

@@ -138,7 +138,6 @@ nnoremap é $
 noremap <C-A> <Home>
 noremap <C-E> <End>
 
-
 " Add two-column feature for reading python or text (http://vim.wikia.com/wiki/View_text_file_in_two_columns)
 noremap <silent> <Leader>vs :<C-u>let @z=&so<CR>:set so=0 noscb<CR>:bo vs<CR>Ljzt:setl scb<CR><C-w>p:setl scb<CR>:let &so=@z<CR>
 noremap <silent> <Leader>ac :exe AddColumn()<CR>
