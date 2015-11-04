@@ -33,6 +33,8 @@ map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 
 "" Vim-session
+" Persist local buffer options and mappings - e.g. nowrap for some windows - very cool and hidden feature!
+set sessionoptions+=localoptions
 let g:session_autosave = 'no'
 let g:session_autoload = 'yes'
 nnoremap <Leader>so :OpenSession<CR>
@@ -73,8 +75,11 @@ map <C-w><Bar> :MaximizerToggle<CR>
 
 " Gitgutter
 let g:gitgutter_map_keys = 0
-map hn <Plug>GitGutterNextHunk
-map hp <Plug>GitGutterPrevHunk
+let g:gitgutter_override_sign_column_highlight = 0
+highlight SignColumn ctermbg=darkblue    " terminal Vim
+"highlight SignColumn guibg=whatever      " gVim/MacVim
+map <Leader>hn <Plug>GitGutterNextHunk
+map <Leader>hp <Plug>GitGutterPrevHunk
 " Refresh immidiately, need because it is refreshed on CursorHold for updatetime secs
 " set updatetime=1000 " adjusted in common.vim because it affects everything!!!
 let g:gitgutter_realtime = 1
@@ -98,7 +103,7 @@ set sessionoptions-=blank "This will prevent |:mksession| from saving |syntastic
 "let g:syntastic_ruby_mri_args = "--my --args --here"
 
 " Tagbar
-nmap <C-r> :TagbarToggle<CR>
+nmap <C-t> :TagbarToggle<CR>
 "let g:tagbar_map_togglefold = "<space>"
 let g:tagbar_map_showproto = "<right>"
 let g:tagbar_autoclose = 0
@@ -120,6 +125,7 @@ let g:tagbar_previewwin_pos = "aboveleft"
 
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
+nmap ,n :NERDTreeFind<CR>
 let g:NERDTreeDirArrows = 1
 "let g:NERDTreeDirArrowExpandable = '▸'
 "let g:NERDTreeDirArrowCollapsible = '▾'
@@ -128,8 +134,9 @@ let g:NERDTreeWinSize=50
 set autochdir
 
 " Make ctrl-p work with nerdtree
-let NERDTreeChDirMode=2
-let g:ctrlp_working_path_mode = 'c'
+let NERDTreeChDirMode=1
+let g:ctrlp_working_path_mode = 'wr'
+"let g:ctrlp_working_path_mode = 'c'
 
 " Open a NERDTree automatically when vim starts up if no files were specified
 " This fights with auto-reopening of previous vim-session plugin session

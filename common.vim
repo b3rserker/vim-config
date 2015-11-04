@@ -25,7 +25,7 @@ let mapleader=","
 colorscheme default
 
 " Gitgutter requirement - refresh intervall of diffing takes this
-set updatetime=4000     " Refresh immidiately, need because it is refreshed on CursorHold for updatetime secs
+set updatetime=1000     " Refresh immidiately, need because it is refreshed on CursorHold for updatetime secs
 
 set mouse=
 set encoding=utf-8
@@ -152,3 +152,8 @@ function! AddColumn()
   setl scrollbind
   let &so=@z
 endfunction
+
+" Hi the current line/column feature
+"hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"nnoremap <Leader>hi :set cursorline! cursorcolumn!<CR>
