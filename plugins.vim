@@ -35,14 +35,14 @@ map <Leader>h <Plug>(easymotion-linebackward)
 "" Vim-session
 let g:session_autosave = 'no'
 let g:session_autoload = 'yes'
-nnoremap <leader>so :OpenSession<CR>
-nnoremap <leader>ss :SaveSession<CR>
-nnoremap <leader>sd :DeleteSession<CR>
-nnoremap <leader>sc :CloseSession<CR>
+nnoremap <Leader>so :OpenSession<CR>
+nnoremap <Leader>ss :SaveSession<CR>
+nnoremap <Leader>sd :DeleteSession<CR>
+nnoremap <Leader>sc :CloseSession<CR>
 
 "Bufstop
-map <leader><leader> :BufstopFast<cr>
-map <leader>a :BufstopModeFast<CR>     " a command for quick switching
+map <Leader><Leader> :BufstopFast<cr>
+map <Leader>a :BufstopModeFast<CR>     " a command for quick switching
 "map <C-tab>   :BufstopBack<CR>
 "map <S-tab>   :BufstopForward<CR>
 let g:BufstopAutoSpeedToggle = 1       " now I can press ,3,3,3 to cycle the last 3 buffers
@@ -154,3 +154,28 @@ let g:NERDTreeIndicatorMapCustom = {
 
 " Redraw airline after sourcing! Or there will be blue empty bar instead!
 silent! AirlineRefresh
+
+" Vim-indentwise - best addon for YAML navigation!
+map <Leader>pl <Plug>(IndentWisePreviousLesserIndent)
+map <Leader>pe <Plug>(IndentWisePreviousEqualIndent)
+map <Leader>pg <Plug>(IndentWisePreviousGreaterIndent)
+map <Leader>pa <Plug>(IndentWisePreviousAbsoluteIndent)
+
+map <Leader>nl <Plug>(IndentWiseNextLesserIndent)
+map <Leader>ne <Plug>(IndentWiseNextEqualIndent)
+map <Leader>ng <Plug>(IndentWiseNextGreaterIndent)
+map <Leader>na <Plug>(IndentWiseNextAbsoluteIndent)
+
+map <Leader>sb <Plug>(IndentWiseBlockScopeBoundaryBegin)
+map <Leader>se <Plug>(IndentWiseBlockScopeBoundaryEnd)
+
+" Semantic-Highlight.vim (quick data-flow recognition in code)
+nnoremap <Leader>hh :SemanticHighlightToggle<cr>
+let g:semanticTermColors = [20,10,30,50,70,90,110,140,170,200,230]
+
+let g:semanticBlacklistOverride = {
+    \ 'python': [
+    \   'module',
+    \   'dict',
+    \ ]
+\ }
