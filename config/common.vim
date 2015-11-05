@@ -9,7 +9,8 @@ set regexpengine=1
 filetype off
 syntax off
 set nocompatible
-execute pathogen#infect()
+"execute pathogen#infect()
+execute pathogen#infect('plugins/{}')
 syntax on
 filetype on
 " Enable filetype plugins 

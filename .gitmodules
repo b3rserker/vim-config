@@ -1,69 +1,69 @@
-[submodule "bundle/bufstop"]
-	path = bundle/bufstop
+[submodule "plugins/bufstop"]
+	path = plugins/bufstop
 	url = https://github.com/mihaifm/bufstop.git
-[submodule "bundle/ctrlp.vim"]
-	path = bundle/ctrlp.vim
+[submodule "plugins/ctrlp.vim"]
+	path = plugins/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "bundle/vim-airline"]
-	path = bundle/vim-airline
+[submodule "plugins/vim-airline"]
+	path = plugins/vim-airline
 	url = https://github.com/bling/vim-airline.git
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
+[submodule "plugins/vim-fugitive"]
+	path = plugins/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/vim-plugin-viewdoc"]
-	path = bundle/vim-plugin-viewdoc
+[submodule "plugins/vim-plugin-viewdoc"]
+	path = plugins/vim-plugin-viewdoc
 	url = https://github.com/powerman/vim-plugin-viewdoc.git
-[submodule "bundle/vim-misc"]
-	path = bundle/vim-misc
+[submodule "plugins/vim-misc"]
+	path = plugins/vim-misc
 	url = https://github.com/xolox/vim-misc.git
-[submodule "bundle/vim-session"]
-	path = bundle/vim-session
+[submodule "plugins/vim-session"]
+	path = plugins/vim-session
 	url = https://github.com/xolox/vim-session.git
-[submodule "bundle/vim-easymotion"]
-	path = bundle/vim-easymotion
+[submodule "plugins/vim-easymotion"]
+	path = plugins/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
-[submodule "bundle/vim-togglecursor"]
-	path = bundle/vim-togglecursor
+[submodule "plugins/vim-togglecursor"]
+	path = plugins/vim-togglecursor
 	url = https://github.com/jszakmeister/vim-togglecursor.git
-[submodule "bundle/vim-pathogen"]
-	path = bundle/vim-pathogen
+[submodule "plugins/vim-pathogen"]
+	path = plugins/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "bundle/vim-visual-star-search"]
-	path = bundle/vim-visual-star-search
+[submodule "plugins/vim-visual-star-search"]
+	path = plugins/vim-visual-star-search
 	url = https://github.com/nelstrom/vim-visual-star-search.git
-[submodule "bundle/vim-yaml"]
-	path = disabled/vim-yaml
-	url = https://github.com/stephpy/vim-yaml.git
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
+[submodule "plugins/syntastic"]
+	path = plugins/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/vim-maximizer"]
-	path = bundle/vim-maximizer
+[submodule "plugins/vim-maximizer"]
+	path = plugins/vim-maximizer
 	url = https://github.com/vim-scripts/vim-maximizer.git
-[submodule "bundle/tagbar"]
-	path = bundle/tagbar
+[submodule "plugins/tagbar"]
+	path = plugins/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
+[submodule "plugins/nerdcommenter"]
+	path = plugins/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
+[submodule "plugins/nerdtree"]
+	path = plugins/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/nerdtree-git-plugin"]
-	path = bundle/nerdtree-git-plugin
+[submodule "plugins/nerdtree-git-plugin"]
+	path = plugins/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
-[submodule "bundle/vim-extradite"]
-	path = bundle/vim-extradite
+[submodule "plugins/vim-extradite"]
+	path = plugins/vim-extradite
 	url = https://github.com/int3/vim-extradite.git
-[submodule "bundle/vim-indentwise"]
-	path = bundle/vim-indentwise
+[submodule "plugins/vim-indentwise"]
+	path = plugins/vim-indentwise
 	url = https://github.com/jeetsukumaran/vim-indentwise.git
-[submodule "bundle/vim-semantic-highlight"]
-	path = bundle/vim-semantic-highlight
+[submodule "plugins/vim-semantic-highlight"]
+	path = plugins/vim-semantic-highlight
 	url = https://github.com/jaxbot/semantic-highlight.vim.git
-[submodule "bundle/vim-gitgutter.git"]
-	path = bundle/vim-gitgutter.git
+[submodule "plugins/vim-gitgutter.git"]
+	path = plugins/vim-gitgutter.git
 	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "bundle/vim-signature.git"]
-	path = bundle/vim-signature
+[submodule "plugins/vim-signature.git"]
+	path = plugins/vim-signature
 	url = https://github.com/kshenoy/vim-signature.git 
+[submodule "plugins-disabled/vim-yaml"]
+	path = plugins-disabled/vim-yaml
+	url = https://github.com/stephpy/vim-yaml.git

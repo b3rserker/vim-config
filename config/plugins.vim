@@ -35,12 +35,17 @@ map <Leader>h <Plug>(easymotion-linebackward)
 "" Vim-session
 " Persist local buffer options and mappings - e.g. nowrap for some windows - very cool and hidden feature!
 set sessionoptions+=localoptions
-let g:session_autosave = 'no'
 let g:session_autoload = 'yes'
+let g:session_autosave = 'no'
 nnoremap <Leader>so :OpenSession<CR>
 nnoremap <Leader>ss :SaveSession<CR>
 nnoremap <Leader>sd :DeleteSession<CR>
 nnoremap <Leader>sc :CloseSession<CR>
+let g:session_persist_globals = ['&sessionoptions']
+call add(g:session_persist_globals, 'g:session_autoload')
+call add(g:session_persist_globals, 'g:session_autosave')
+call add(g:session_persist_globals, 'g:session_default_to_last')
+call add(g:session_persist_globals, 'g:session_persist_globals')
 
 "Bufstop
 map <Leader><Leader> :BufstopFast<cr>

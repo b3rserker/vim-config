@@ -1,5 +1,5 @@
 function! SourceMyScripts()
-  let file_list = split(globpath("~/.vim", "*.vim"), '\n')
+  let file_list = split(globpath("~/.vim/config", "*.vim"), '\n')
 
   for file in file_list
     execute( 'source '.file )

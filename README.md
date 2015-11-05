@@ -1,6 +1,10 @@
 # vim-config
 My attempt to build vim IDE(!), very experimental, very messy so far - but I am working on it!
 
+Based on pathogen plugin loader.
+
+Optimized for navigation speed using EasyMotion for almost every possible navigation action.
+
 # Installation
 
 Install https://github.com/powerline/fonts first.
