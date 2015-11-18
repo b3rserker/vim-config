@@ -48,6 +48,7 @@ call add(g:session_persist_globals, 'g:session_default_to_last')
 call add(g:session_persist_globals, 'g:session_persist_globals')
 
 "Bufstop
+unmap <Leader>r
 map <Leader><Leader> :BufstopFast<cr>
 map <Leader>a :BufstopModeFast<CR>     " a command for quick switching
 "map <C-tab>   :BufstopBack<CR>
@@ -191,3 +192,25 @@ let g:semanticBlacklistOverride = {
     \   'dict',
     \ ]
 \ }
+
+" Vim-ultimate-colorscheme-utility
+" Stop using arrow keys in kinda funny way! ;)
+let g:ulti_color_Prev_Global = '<Left>'
+let g:ulti_color_Next_Global = '<Right>'
+"<leader><leader>a    " Adds the current colorscheme to favorites
+"<leader><leader>A    " Removes the current colorscheme from favorites
+"<leader><leader>f    " Goes to next colorscheme in filetype specific favorites
+"<leader><leader>F    " Goes to previous colorscheme in filetype specific favorites
+"<leader><leader>g    " Goes to next colorscheme in global favorites
+"<leader><leader>G    " Goes to previous colorscheme in global favorites
+"<leader><leader>n    " Goes to next colorscheme in all colors
+"<leader><leader>N    " Goes to previous colorscheme in all colors
+"
+"<leader><leader>t    " Adds the current font to favorites
+"<leader><leader>T    " Removes the current font from favorites
+"<leader><leader>e    " Goes to the next font in filetype specific favorites
+"<leader><leader>E    " Goes to the previous font in filetype specific favorites
+"<leader><leader>r    " Goes to the next font in global favorites
+"<leader><leader>R    " Goes to the previous font in global favorites
+"
+"<leader><leader>q    " Views all favorites

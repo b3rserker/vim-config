@@ -67,3 +67,9 @@
 [submodule "plugins-disabled/vim-yaml"]
 	path = plugins-disabled/vim-yaml
 	url = https://github.com/stephpy/vim-yaml.git
+[submodule "plugins/vim-ultimate-colorscheme-utility"]
+	path = plugins/vim-ultimate-colorscheme-utility
+	url = https://github.com/biskark/vim-ultimate-colorscheme-utility
+[submodule "plugins/vim-colorschemes"]
+	path = plugins/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes
