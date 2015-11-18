@@ -1,5 +1,5 @@
 # vim-config
-My attempt to build vim IDE(!), very experimental, very messy so far - but I am working on it!
+My attempt to build productive python & ruby IDE(!) based on vim (after migration from PyCharm and RubyMine), very experimental, very messy so far - but I am working on it!
 
 Based on pathogen plugin loader.
 
