@@ -1,6 +1,9 @@
 " Make sure we are on same tune first
 set shell=/bin/bash
 
+" Set tags variable
+set tags=./tags,~/.rvm/tags;
+
 " Freakin important - THIS SOLVE PROBLEMS WITH LONG LINE SYNTAX HGLTING!
 set regexpengine=1
 
@@ -141,7 +144,7 @@ noremap <C-E> <End>
 
 " Add two-column feature for reading python or text (http://vim.wikia.com/wiki/View_text_file_in_two_columns)
 noremap <silent> <Leader>vs :<C-u>let @z=&so<CR>:set so=0 noscb<CR>:bo vs<CR>Ljzt:setl scb<CR><C-w>p:setl scb<CR>:let &so=@z<CR>
-noremap <silent> <Leader>ac :exe AddColumn()<CR>
+noremap <silent> <Leader>va :exe AddColumn()<CR>
 function! AddColumn()
   exe "norm \<C-u>"
   let @z=&so
@@ -158,3 +161,12 @@ endfunction
 "hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "nnoremap <Leader>hi :set cursorline! cursorcolumn!<CR>
+
+" Start working with tabs
+nnoremap tn :tabnew<CR>
+nnoremap tc :tabclose<CR>
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
