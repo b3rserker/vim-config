@@ -1,5 +1,5 @@
 " Make sure we are on same tune first
-set shell=/bin/bash
+" set shell=/bin/bash
 
 " Freakin important - THIS SOLVE PROBLEMS WITH LONG LINE SYNTAX HGLTING!
 set regexpengine=1
@@ -19,6 +19,7 @@ autocmd FileType yaml let b:did_indent = 1
 
 " Mapleader
 "let mapleader="<\Space>"
+map "," <Nop>
 let mapleader=","
 
 " Common configuration

@@ -1,12 +1,12 @@
-" Yaml faster sytax
-" au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
-
 "" AirLine
 " Just show the filename (no path) in the tab
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2 " always show airline!
 let g:airline_powerline_fonts = 1
+
+" Yaml faster sytax
+" au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
 
 "" Vim-ansible-yaml
 " Ansible doesn't work better that vim's yaml, even more doesn't do auto-ident with gg=G combo
@@ -34,18 +34,14 @@ map <Leader>h <Plug>(easymotion-linebackward)
 
 "" Vim-session
 " Persist local buffer options and mappings - e.g. nowrap for some windows - very cool and hidden feature!
-set sessionoptions+=localoptions
-let g:session_autoload = 'yes'
-let g:session_autosave = 'no'
+set viewoptions+=cursor,folds,slash,unix,localoptions
+set viewoptions-=options
+let g:session_autoload = 'no'
+"let g:session_autosave = 'no'
 nnoremap <Leader>so :OpenSession<CR>
 nnoremap <Leader>ss :SaveSession<CR>
 nnoremap <Leader>sd :DeleteSession<CR>
 nnoremap <Leader>sc :CloseSession<CR>
-let g:session_persist_globals = ['&sessionoptions']
-call add(g:session_persist_globals, 'g:session_autoload')
-call add(g:session_persist_globals, 'g:session_autosave')
-call add(g:session_persist_globals, 'g:session_default_to_last')
-call add(g:session_persist_globals, 'g:session_persist_globals')
 
 "Bufstop
 map <Leader><Leader> :BufstopFast<cr>
@@ -191,3 +187,10 @@ let g:semanticBlacklistOverride = {
     \   'dict',
     \ ]
 \ }
+
+" Vim-multiple-cursors
+"unmap <C-m>
+let g:multi_cursor_use_default_mapping=0
+"let g:multi_cursor_start_key='<C-m>'
+"let g:multi_cursor_quit_key='<C-c>'
+"nnoremap <C-c> :call multiple_cursors#quit()<CR>

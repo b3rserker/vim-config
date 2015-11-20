@@ -67,3 +67,6 @@
 [submodule "plugins-disabled/vim-yaml"]
 	path = plugins-disabled/vim-yaml
 	url = https://github.com/stephpy/vim-yaml.git
+[submodule "plugins/vim-multiple-cursors"]
+	path = plugins/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors
