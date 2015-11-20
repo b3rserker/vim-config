@@ -73,3 +73,6 @@
 [submodule "plugins/vim-colorschemes"]
 	path = plugins/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes
+[submodule "plugins/vim-ruby.git"]
+	path = plugins-disabled/vim-ruby.git
+	url = https://github.com/vim-ruby/vim-ruby.git

@@ -62,7 +62,7 @@ let g:BufstopSpeedpKeys = "qwertasdfgyxcvb"
 let g:BufstopSplit="topleft"
 let g:BufstopSorting="none"
 
-" Taglist
+" Taglist - deprecated - use Tagbar now!
 "nnoremap <silent> <C-g> :TlistToggle<CR>
 "let g:Tlist_Auto_Highlight_Tag=1
 "let g:Tlist_GainFocus_On_ToggleOpen=1
@@ -205,12 +205,13 @@ let g:ulti_color_Next_Global = '<Right>'
 "<leader><leader>G    " Goes to previous colorscheme in global favorites
 "<leader><leader>n    " Goes to next colorscheme in all colors
 "<leader><leader>N    " Goes to previous colorscheme in all colors
-"
 "<leader><leader>t    " Adds the current font to favorites
 "<leader><leader>T    " Removes the current font from favorites
 "<leader><leader>e    " Goes to the next font in filetype specific favorites
 "<leader><leader>E    " Goes to the previous font in filetype specific favorites
 "<leader><leader>r    " Goes to the next font in global favorites
 "<leader><leader>R    " Goes to the previous font in global favorites
-"
 "<leader><leader>q    " Views all favorites
+
+" Current colorscheme FTR
+colorscheme distinguished
