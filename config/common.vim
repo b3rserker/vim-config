@@ -159,3 +159,6 @@ endfunction
 "hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "nnoremap <Leader>hi :set cursorline! cursorcolumn!<CR>
+
+noremap : .
+noremap . :

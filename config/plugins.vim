@@ -25,7 +25,7 @@ map <Space> <Plug>(easymotion-w)
 "map <NUL> <Plug>(easymotion-b) " Try CTRL+Space (=NUL)
 map <S-Space> <Plug>(easymotion-b)
 "map <S-NUL> <Plug>(easymotion-b)
-let g:EasyMotion_keys = 'asdfgqwertzuiopzxcvbnmhljk'
+let g:EasyMotion_keys = 'asdfgqwertzuiopxcvbnmhljk'
 let g:EasyMotion_grouping = 1
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
@@ -36,23 +36,23 @@ map <Leader>h <Plug>(easymotion-linebackward)
 " Persist local buffer options and mappings - e.g. nowrap for some windows - very cool and hidden feature!
 set viewoptions+=cursor,folds,slash,unix,localoptions
 set viewoptions-=options
-let g:session_autoload = 'no'
-"let g:session_autosave = 'no'
+let g:session_autoload = 'yes'
+let g:session_autosave = 'no'
 nnoremap <Leader>so :OpenSession<CR>
 nnoremap <Leader>ss :SaveSession<CR>
 nnoremap <Leader>sd :DeleteSession<CR>
 nnoremap <Leader>sc :CloseSession<CR>
 
 "Bufstop
-map <Leader><Leader> :BufstopFast<cr>
-map <Leader>a :BufstopModeFast<CR>     " a command for quick switching
+nnoremap <Leader><Leader> :BufstopFast<cr>
+nnoremap <Leader>a :BufstopModeFast<CR>     " a command for quick switching
 "map <C-tab>   :BufstopBack<CR>
 "map <S-tab>   :BufstopForward<CR>
 let g:BufstopAutoSpeedToggle = 1       " now I can press ,3,3,3 to cycle the last 3 buffers
 "let g:BufstopKeys = "asfcvzxqwertyuiopbnm"
 "let g:BufstoSpeedKeys = "asfcvzxqwertyuiopbnm"
-let g:BufstopKeys =  "qwertasdfgyxcvb"
-let g:BufstopSpeedpKeys = "qwertasdfgyxcvb"
+let g:BufstopKeys =  "qwertasfgyxcvb"
+let g:BufstopSpeedpKeys = "qwertasfgyxcvb"
 "g:BufstopLeader
 let g:BufstopSplit="topleft"
 let g:BufstopSorting="none"
@@ -125,14 +125,18 @@ let g:tagbar_previewwin_pos = "aboveleft"
 " left default
 
 " NerdTree
-map <C-n> :NERDTreeToggle<CR>
-nmap ,n :NERDTreeFind<CR>
+noremap <C-n> :NERDTreeToggle<CR>
+noremap ,n :NERDTreeFind<CR>
 let g:NERDTreeDirArrows = 1
 "let g:NERDTreeDirArrowExpandable = '▸'
 "let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeQuitOnOpen=0
 let g:NERDTreeWinSize=50
-set autochdir
+"set autochdir
+
+" Todo - solve this
+"autocmd VimEnter * NERDTreeFind
+"au VimEnter,BufWinEnter * NERDTreeFind
 
 " Make ctrl-p work with nerdtree
 let NERDTreeChDirMode=1
@@ -145,7 +149,7 @@ let g:ctrlp_working_path_mode = 'wr'
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " NerdTree-git
 let g:NERDTreeIndicatorMapCustom = {
@@ -189,8 +193,8 @@ let g:semanticBlacklistOverride = {
 \ }
 
 " Vim-multiple-cursors
-"unmap <C-m>
+"unmap <C-u>
 let g:multi_cursor_use_default_mapping=0
-"let g:multi_cursor_start_key='<C-m>'
-"let g:multi_cursor_quit_key='<C-c>'
+let g:multi_cursor_start_key='<C-x>'
+let g:multi_cursor_quit_key='<C-c>'
 "nnoremap <C-c> :call multiple_cursors#quit()<CR>
