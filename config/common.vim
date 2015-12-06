@@ -79,11 +79,10 @@ set noea
 
 " Intendation & TAB
 set smarttab            " insert tabs on the start of a line according to shiftwidth, not tabstop
-set tabstop=4
-set softtabstop=4
+set tabstop=2
 set expandtab
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set autoindent " keep indentation from previous line 
 set smartindent " automatically inserts indentation in some cases
 "set cindent " like smartindent, but stricter and more customisable, used in C language
@@ -117,7 +116,7 @@ nnoremap <C-j> :bprevious<CR>
 "augroup END
 
 " Quickly open/reload vim
-nnoremap <leader>r :source $MYVIMRC<CR>
+map <leader>r :source $MYVIMRC<CR>:echo "vimrc reloaded"<CR>
 " On save too
 "augroup reload_vimrc " {
 "    autocmd!
@@ -139,7 +138,7 @@ map <C-c> <Esc>
 " Get rid of vim's begin/end nonsense mappings
 nnoremap + 0
 nnoremap é $
-noremap <C-A> <Home>
+noremap <C-A> ^
 noremap <C-E> <End>
 
 " Add two-column feature for reading python or text (http://vim.wikia.com/wiki/View_text_file_in_two_columns)
@@ -170,3 +169,6 @@ nnoremap tj  :tabnext<CR>
 nnoremap tk  :tabprev<CR>
 nnoremap tl  :tablast<CR>
 nnoremap tt  :tabedit<Space>
+
+noremap . :
+noremap : .

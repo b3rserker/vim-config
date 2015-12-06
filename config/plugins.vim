@@ -7,6 +7,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2 " always show airline!
 let g:airline_powerline_fonts = 1
+" Show numbers in tab/buffer line
+let g:airline#extensions#tabline#buffer_idx_mode = 0
 
 "" Vim-ansible-yaml
 " Ansible doesn't work better that vim's yaml, even more doesn't do auto-ident with gg=G combo
@@ -19,13 +21,13 @@ map <Esc>[@ <S-Space>
 "autocmd BufReadPost * unmap! <Space>
 "au BufWinEnter * silent unmap! <Space>
 
-""Easymotion (2)
-map <Leader> <Plug>(easymotion-prefix)
+"Easymotion (2)
+"map <Leader><Leader> <Plug>(easymotion-prefix)
 map <Space> <Plug>(easymotion-w)
 "map <NUL> <Plug>(easymotion-b) " Try CTRL+Space (=NUL)
 map <S-Space> <Plug>(easymotion-b)
 "map <S-NUL> <Plug>(easymotion-b)
-let g:EasyMotion_keys = 'asdfgqwertzuiopzxcvbnmhljk'
+let g:EasyMotion_keys = 'asdfgqwertuiopzxcvbnmhljk'
 let g:EasyMotion_grouping = 1
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
@@ -46,9 +48,10 @@ call add(g:session_persist_globals, 'g:session_autoload')
 call add(g:session_persist_globals, 'g:session_autosave')
 call add(g:session_persist_globals, 'g:session_default_to_last')
 call add(g:session_persist_globals, 'g:session_persist_globals')
+" Disable all session locking - because this is complete bullsh*t!
+let g:session_lock_enabled = 0
 
 "Bufstop
-unmap <Leader>r
 map <Leader><Leader> :BufstopFast<cr>
 map <Leader>a :BufstopModeFast<CR>     " a command for quick switching
 "map <C-tab>   :BufstopBack<CR>
@@ -109,7 +112,7 @@ set sessionoptions-=blank "This will prevent |:mksession| from saving |syntastic
 "let g:syntastic_ruby_mri_args = "--my --args --here"
 
 " Tagbar
-nmap <C-t> :TagbarToggle<CR>
+noremap <leader>tt :TagbarToggle<CR>
 "let g:tagbar_map_togglefold = "<space>"
 let g:tagbar_map_showproto = "<right>"
 let g:tagbar_autoclose = 0
@@ -128,10 +131,12 @@ let g:tagbar_previewwin_pos = "aboveleft"
 
 " NerdCommenter
 " left default
+" <leader>c(preferably l or|c|n|m)
+" Uncomment with <leader>cu
 
 " NerdTree
-map <C-n> :NERDTreeToggle<CR>
-nmap ,n :NERDTreeFind<CR>
+map <leader>n :NERDTreeToggle<CR>
+nmap <leader><leader>n :NERDTreeFind<CR>
 let g:NERDTreeDirArrows = 1
 "let g:NERDTreeDirArrowExpandable = '▸'
 "let g:NERDTreeDirArrowCollapsible = '▾'
@@ -215,3 +220,12 @@ let g:ulti_color_Next_Global = '<Right>'
 
 " Current colorscheme FTR
 colorscheme distinguished
+
+" https://github.com/terryma/vim-multiple-cursors
+" let g:multi_cursor_use_default_mapping=0
+
+" Default mapping
+let g:multi_cursor_next_key='<C-l>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<C-c>'
