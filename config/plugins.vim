@@ -4,6 +4,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2 " always show airline!
 let g:airline_powerline_fonts = 1
+" Show numbers in tab/buffer line
+let g:airline#extensions#tabline#buffer_idx_mode = 0
 
 " Yaml faster sytax
 " au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
@@ -19,13 +21,13 @@ map <Esc>[@ <S-Space>
 "autocmd BufReadPost * unmap! <Space>
 "au BufWinEnter * silent unmap! <Space>
 
-""Easymotion (2)
-map <Leader> <Plug>(easymotion-prefix)
+"Easymotion (2)
+"map <Leader><Leader> <Plug>(easymotion-prefix)
 map <Space> <Plug>(easymotion-w)
 "map <NUL> <Plug>(easymotion-b) " Try CTRL+Space (=NUL)
 map <S-Space> <Plug>(easymotion-b)
 "map <S-NUL> <Plug>(easymotion-b)
-let g:EasyMotion_keys = 'asdfgqwertzuiopxcvbnmhljk'
+let g:EasyMotion_keys = 'asdfgqwertuiopzxcvbnmhljk'
 let g:EasyMotion_grouping = 1
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
@@ -42,6 +44,13 @@ nnoremap <Leader>so :OpenSession<CR>
 nnoremap <Leader>ss :SaveSession<CR>
 nnoremap <Leader>sd :DeleteSession<CR>
 nnoremap <Leader>sc :CloseSession<CR>
+let g:session_persist_globals = ['&sessionoptions']
+call add(g:session_persist_globals, 'g:session_autoload')
+call add(g:session_persist_globals, 'g:session_autosave')
+call add(g:session_persist_globals, 'g:session_default_to_last')
+call add(g:session_persist_globals, 'g:session_persist_globals')
+" Disable all session locking - because this is complete bullsh*t!
+let g:session_lock_enabled = 0
 
 "Bufstop
 nnoremap <Leader><Leader> :BufstopFast<cr>
@@ -51,13 +60,13 @@ nnoremap <Leader>a :BufstopModeFast<CR>     " a command for quick switching
 let g:BufstopAutoSpeedToggle = 1       " now I can press ,3,3,3 to cycle the last 3 buffers
 "let g:BufstopKeys = "asfcvzxqwertyuiopbnm"
 "let g:BufstoSpeedKeys = "asfcvzxqwertyuiopbnm"
-let g:BufstopKeys =  "qwertasfgyxcvb"
-let g:BufstopSpeedpKeys = "qwertasfgyxcvb"
+let g:BufstopKeys =  "qwertasdfgyxcvb"
+let g:BufstopSpeedpKeys = "qwertasdfgyxcvb"
 "g:BufstopLeader
 let g:BufstopSplit="topleft"
 let g:BufstopSorting="none"
 
-" Taglist
+" Taglist - deprecated - use Tagbar now!
 "nnoremap <silent> <C-g> :TlistToggle<CR>
 "let g:Tlist_Auto_Highlight_Tag=1
 "let g:Tlist_GainFocus_On_ToggleOpen=1
@@ -104,7 +113,7 @@ set sessionoptions-=blank "This will prevent |:mksession| from saving |syntastic
 "let g:syntastic_ruby_mri_args = "--my --args --here"
 
 " Tagbar
-nmap <C-t> :TagbarToggle<CR>
+noremap <leader>tt :TagbarToggle<CR>
 "let g:tagbar_map_togglefold = "<space>"
 let g:tagbar_map_showproto = "<right>"
 let g:tagbar_autoclose = 0
@@ -123,6 +132,8 @@ let g:tagbar_previewwin_pos = "aboveleft"
 
 " NerdCommenter
 " left default
+" <leader>c(preferably l or|c|n|m)
+" Uncomment with <leader>cu
 
 " NerdTree
 noremap <C-n> :NERDTreeToggle<CR>
@@ -198,3 +209,35 @@ let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_start_key='<C-x>'
 let g:multi_cursor_quit_key='<C-c>'
 "nnoremap <C-c> :call multiple_cursors#quit()<CR>
+
+" Vim-ultimate-colorscheme-utility
+" Stop using arrow keys in kinda funny way! ;)
+let g:ulti_color_Prev_Global = '<Left>'
+let g:ulti_color_Next_Global = '<Right>'
+"<leader><leader>a    " Adds the current colorscheme to favorites
+"<leader><leader>A    " Removes the current colorscheme from favorites
+"<leader><leader>f    " Goes to next colorscheme in filetype specific favorites
+"<leader><leader>F    " Goes to previous colorscheme in filetype specific favorites
+"<leader><leader>g    " Goes to next colorscheme in global favorites
+"<leader><leader>G    " Goes to previous colorscheme in global favorites
+"<leader><leader>n    " Goes to next colorscheme in all colors
+"<leader><leader>N    " Goes to previous colorscheme in all colors
+"<leader><leader>t    " Adds the current font to favorites
+"<leader><leader>T    " Removes the current font from favorites
+"<leader><leader>e    " Goes to the next font in filetype specific favorites
+"<leader><leader>E    " Goes to the previous font in filetype specific favorites
+"<leader><leader>r    " Goes to the next font in global favorites
+"<leader><leader>R    " Goes to the previous font in global favorites
+"<leader><leader>q    " Views all favorites
+
+" Current colorscheme FTR
+colorscheme distinguished
+
+" https://github.com/terryma/vim-multiple-cursors
+" let g:multi_cursor_use_default_mapping=0
+
+" Default mapping
+let g:multi_cursor_next_key='<C-l>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<C-c>'

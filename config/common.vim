@@ -1,5 +1,8 @@
 " Make sure we are on same tune first
-" set shell=/bin/bash
+set shell=/bin/bash
+
+" Set tags variable
+set tags=./tags,~/.rvm/tags;
 
 " Freakin important - THIS SOLVE PROBLEMS WITH LONG LINE SYNTAX HGLTING!
 set regexpengine=1
@@ -32,7 +35,7 @@ set updatetime=1000     " Refresh immidiately, need because it is refreshed on C
 set mouse=
 set encoding=utf-8
 set number
-set hidden 		" abandon a buffer when unloaded
+set hidden " abandon a buffer when unloaded
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set showcmd
 set cursorline
@@ -77,11 +80,10 @@ set noea
 
 " Intendation & TAB
 set smarttab            " insert tabs on the start of a line according to shiftwidth, not tabstop
-set tabstop=4
-set softtabstop=4
+set tabstop=2
 set expandtab
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set autoindent " keep indentation from previous line 
 set smartindent " automatically inserts indentation in some cases
 "set cindent " like smartindent, but stricter and more customisable, used in C language
@@ -115,7 +117,7 @@ nnoremap <C-j> :bprevious<CR>
 "augroup END
 
 " Quickly open/reload vim
-nnoremap <leader>r :source $MYVIMRC<CR>
+map <leader>r :source $MYVIMRC<CR>:echo "vimrc reloaded"<CR>
 " On save too
 "augroup reload_vimrc " {
 "    autocmd!
@@ -137,12 +139,12 @@ map <C-c> <Esc>
 " Get rid of vim's begin/end nonsense mappings
 nnoremap + 0
 nnoremap é $
-noremap <C-A> <Home>
+noremap <C-A> ^
 noremap <C-E> <End>
 
 " Add two-column feature for reading python or text (http://vim.wikia.com/wiki/View_text_file_in_two_columns)
 noremap <silent> <Leader>vs :<C-u>let @z=&so<CR>:set so=0 noscb<CR>:bo vs<CR>Ljzt:setl scb<CR><C-w>p:setl scb<CR>:let &so=@z<CR>
-noremap <silent> <Leader>ac :exe AddColumn()<CR>
+noremap <silent> <Leader>va :exe AddColumn()<CR>
 function! AddColumn()
   exe "norm \<C-u>"
   let @z=&so
@@ -160,5 +162,17 @@ endfunction
 "hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "nnoremap <Leader>hi :set cursorline! cursorcolumn!<CR>
 
-noremap : .
 noremap . :
+noremap : .
+
+" Start working with tabs
+nnoremap tn :tabnew<CR>
+nnoremap tc :tabclose<CR>
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+
+noremap . :
+noremap : .
