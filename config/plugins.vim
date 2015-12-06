@@ -6,12 +6,9 @@ set laststatus=2 " always show airline!
 let g:airline_powerline_fonts = 1
 " Show numbers in tab/buffer line
 let g:airline#extensions#tabline#buffer_idx_mode = 0
-<<<<<<< HEAD
 
 " Yaml faster sytax
 " au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
-=======
->>>>>>> ccf3901b94c38fb204f6f73c9dc419a1cc73cf34
 
 "" Vim-ansible-yaml
 " Ansible doesn't work better that vim's yaml, even more doesn't do auto-ident with gg=G combo
@@ -139,13 +136,8 @@ let g:tagbar_previewwin_pos = "aboveleft"
 " Uncomment with <leader>cu
 
 " NerdTree
-<<<<<<< HEAD
 noremap <C-n> :NERDTreeToggle<CR>
 noremap ,n :NERDTreeFind<CR>
-=======
-map <leader>n :NERDTreeToggle<CR>
-nmap <leader><leader>n :NERDTreeFind<CR>
->>>>>>> ccf3901b94c38fb204f6f73c9dc419a1cc73cf34
 let g:NERDTreeDirArrows = 1
 "let g:NERDTreeDirArrowExpandable = '▸'
 "let g:NERDTreeDirArrowCollapsible = '▾'
