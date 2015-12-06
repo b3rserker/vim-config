@@ -162,9 +162,6 @@ endfunction
 "hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "nnoremap <Leader>hi :set cursorline! cursorcolumn!<CR>
 
-noremap . :
-noremap : .
-
 " Start working with tabs
 nnoremap tn :tabnew<CR>
 nnoremap tc :tabclose<CR>

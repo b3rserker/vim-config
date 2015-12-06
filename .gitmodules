@@ -82,4 +82,3 @@
 [submodule "plugins/vim-rooter.git"]
   path = plugins/vim-rooter.git
   url = https://github.com/airblade/vim-rooter.git
-    
