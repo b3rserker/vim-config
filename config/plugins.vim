@@ -23,6 +23,7 @@ map <Esc>[@ <S-Space>
 
 "Easymotion (2)
 "map <Leader><Leader> <Plug>(easymotion-prefix)
+map <Leader>e <Plug>(easymotion-prefix) # REALLY NEED TO SET THIS!!!
 map <Space> <Plug>(easymotion-w)
 "map <NUL> <Plug>(easymotion-b) " Try CTRL+Space (=NUL)
 map <S-Space> <Plug>(easymotion-b)
@@ -234,7 +235,7 @@ let g:ulti_color_Next_Global = '<Right>'
 colorscheme distinguished
 
 " https://github.com/terryma/vim-multiple-cursors
-" let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_use_default_mapping=0
 
 " Default mapping
 let g:multi_cursor_next_key='<C-l>'
