@@ -68,7 +68,7 @@ let g:BufstopSplit="topleft"
 let g:BufstopSorting="none"
 
 " Taglist - deprecated - use Tagbar now!
-"nnoremap <silent> <C-g> :TlistToggle<CR>
+"nnoremap <silent> <C-T> :TlistToggle<CR>
 "let g:Tlist_Auto_Highlight_Tag=1
 "let g:Tlist_GainFocus_On_ToggleOpen=1
 "let g:Tlist_WinWidth=40
@@ -114,13 +114,13 @@ set sessionoptions-=blank "This will prevent |:mksession| from saving |syntastic
 "let g:syntastic_ruby_mri_args = "--my --args --here"
 
 " Tagbar
-noremap <leader>tt :TagbarToggle<CR>
+noremap <C-T> :TagbarToggle<CR>
 "let g:tagbar_map_togglefold = "<space>"
 let g:tagbar_map_showproto = "<right>"
 let g:tagbar_autoclose = 0
 let g:tagbar_autofocus = 1
 let g:tagbar_left=1
-let g:tagbar_width = 60
+let g:tagbar_width = 40
 let g:tagbar_sort = 0
 let g:tagbar_compact = 1 "omit the short help at the top
 let g:tagbar_indent = 1
