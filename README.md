@@ -7,7 +7,9 @@ Optimized for navigation speed using EasyMotion for almost every possible naviga
 
 # Installation
 
-Install https://github.com/powerline/fonts first.
+Install https://github.com/powerline/fonts first. If you want to look at terrible X terminal fonts whole day you shouldn't be here in first place...
+
+Check https://github.com/b3rserker/konsole-config first as some tweaks may depend on changes here (EasyMotion)
 
 cd ~
 
