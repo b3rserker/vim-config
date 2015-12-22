@@ -82,3 +82,6 @@
 [submodule "plugins/vim-rooter.git"]
   path = plugins/vim-rooter.git
   url = https://github.com/airblade/vim-rooter.git
+[submodule "plugins-staging/vim-ruby-debugger"]
+	path = plugins-staging/vim-ruby-debugger
+	url = https://github.com/astashov/vim-ruby-debugger

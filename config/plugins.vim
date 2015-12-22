@@ -16,7 +16,7 @@ let g:airline#extensions#tabline#buffer_idx_mode = 0
 "au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/bundle/vim-yaml/after/syntax/yaml.vim
 
 "" EasyMotion prereqs (1)
-map <Esc>[@ <S-Space>
+map <Esc>[Y <S-Space>
 " My <SpaceBar> hack
 "autocmd BufReadPost * unmap! <Space>
 "au BufWinEnter * silent unmap! <Space>
@@ -39,7 +39,7 @@ map <Leader>h <Plug>(easymotion-linebackward)
 " Persist local buffer options and mappings - e.g. nowrap for some windows - very cool and hidden feature!
 set viewoptions+=cursor,folds,slash,unix,localoptions
 set viewoptions-=options
-let g:session_autoload = 'yes'
+let g:session_autoload = 'no'
 let g:session_autosave = 'no'
 nnoremap <Leader>so :OpenSession<CR>
 nnoremap <Leader>ss :SaveSession<CR>
