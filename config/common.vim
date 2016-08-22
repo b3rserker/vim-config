@@ -173,3 +173,9 @@ nnoremap tt  :tabedit<Space>
 
 noremap . :
 noremap : .
+
+noremap ú /
+noremap / ú
+
+" This is enabled in file snippet-helper.vim, used for tmux integration!
+"nnoremap <Enter> :echom system("tmux set-buffer \"" . getline('.') . "\"")<CR>:echom 'pasted'<CR>:quit<CR>
